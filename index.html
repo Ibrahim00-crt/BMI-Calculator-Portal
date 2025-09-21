@@ -242,7 +242,7 @@
         return;
       }
       try {
-        const response = await fetch(`http://127.0.0.1:8000/calculate_bmi?weight=${weight}&height=${height}`);
+        const response = await fetch(`https://bmi-calculator-portal-1.onrender.com?weight=${weight}&height=${height}`);
         const data = await response.json();
         document.getElementById('result').innerText = `✅ BMI: ${data.bmi.toFixed(2)} → ${data.message}`;
       } catch (error) {
@@ -252,3 +252,4 @@
   </script>
 </body>
 </html>
+
